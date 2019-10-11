@@ -16,16 +16,36 @@ h1 {
     margin-bottom: 0px;
 }
 
+h2 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+button {
+    margin: 10px;
+}
+
+
+
+#choosePlayer, #character, #list, #enemies, #defender, #fight {
+    display: none;
+}
+
 .image {
     display: inline;
 }
 
-button.start {
+
+.start {
     width: 120px;
     height: 40px;
     border-radius: 5px;
     font-size: 20px;
     font-family: 'Kanit', sans-serif;
+    position: relative;
+    left: 43%;
+    margin-top: 200px;
+    
 }
 
 img {
@@ -38,7 +58,7 @@ p {
     font-family: 'Kanit', sans-serif;
 }
 
-button#fight {
+#fight {
     width: 120px;
     height: 40px;
     border-radius: 5px;

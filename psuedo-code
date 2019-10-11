@@ -15,6 +15,7 @@ else if first click = true,
     push number to empty variable
     make second choice = true
 
+
 else return false
 
 
@@ -34,5 +35,9 @@ if second choice = true
 else return false
 
 
+somewhere in attack is essentially like the equals button and 
+
+to select an id within a div $(id div).on(click)
 
 
+if 
