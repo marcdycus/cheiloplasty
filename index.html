@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Kanit:600,900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Star Wars RPG</title>
+</head>
+
+<body>
+    <h1>Star Wars RPG</h1>
+
+    <div style="display: block" id="start"><button class="start">START</button></div>
+
+    <div class="choose" id="list">
+        <h2>Choose your player!</h2>
+        <button id="dMaul" class="image" value="maul"><img src="assets/images/darth-maul.jpg" alt="darth maul" style="width: 110px">
+            <p>90</p>
+        </button>
+        <button id="dVadar" class="image" value="vadar"><img src="assets/images/darth-vadar.jpg" alt="darth vadar"
+                style="width: 110px">
+            <p>160</p>
+        </button>
+        <button id="yoda" class="image" value="yoda"><img src="assets/images/yoda.jpg" alt="yoda" style="width: 110px">
+            <p>130</p>
+        </button>
+        <button id="solo" class="image" value="solo"><img src="assets/images/han-solo.jpg" alt="han solo" style="width: 110px">
+            <p>100</p>
+        </button>
+    </div>
+
+    <div class="character">
+        <h2>Your character</h2>
+
+    </div>
+
+    <div class="enemies">
+        <h2>Enemies</h2>
+
+    </div>
+
+    <div>
+        <button id="fight">Attack</button>
+    </div>
+
+    <div class="defender">
+        <h2>Choose defender</h2>
+
+    </div>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        var characters = {
+            maul: {
+                attack: 20,
+                health: 90,
+            },
+
+            solo: {
+                attack: 26,
+                health: 100,
+            },
+
+            vadar: {
+                attack: 24,
+                health: 160,
+            },
+
+            yoda: {
+                attack: 30,
+                health: 130,
+            },
+        }
+
+        
+
+            var isChosen = false;
+            var isDefending = false;
+
+            var chosen = "";
+            var enemies = "";
+            var defender = "";
+
+            var chosenChar;
+            var player;
+
+            var chosenEnemy;
+            var enemy;
+
+
+            // On start click (first) reset divs and scores to correct locations and values
+            $("#start").on("click", function () {
+                $("#start").toggle();
+                isChosen = false;
+                isDefending = false;
+
+                $(".choose").append($(".image"));
+
+            });
+
+
+
+            // On Character Click (first)
+            $(".image").on("click", function () {
+                if (isChosen === false) {
+                    chosenChar = $(this).val();
+                    player = characters[chosenChar];
+                    $(".character").append(this);
+                    isChosen = true;
+                    $(".enemies").append($(".choose .image"));
+                } else if (isDefending === false) {
+                    chosenEnemy = $(this).val();
+                    enemy = characters[chosenEnemy];
+                    $(".defender").append(this);
+                    isDefending = true;
+                } else {
+                    return false;
+                }
+            });
+
+
+            // On Attack Click (third)
+            $("#fight").on("click", function () {
+                // if characters are inside div
+
+            });
+
+            
+
+
+});
+
+    </script>
+
+
+
+</body>
+
+</html>

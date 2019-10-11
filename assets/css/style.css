@@ -1,0 +1,47 @@
+body {
+    background-image: url("../images/fight-scene.jpg");
+    background-repeat: none;
+    background-size: cover;
+    width: 100%;
+    height: 700px;
+    font-family: 'Kanit', sans-serif;
+    color: white;
+}
+
+h1 {
+    font-size: 70px;
+    text-align: center;
+    line-height: 60px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.image {
+    display: inline;
+}
+
+button.start {
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: 'Kanit', sans-serif;
+}
+
+img {
+    border: 5px solid white;
+}
+
+p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: 'Kanit', sans-serif;
+}
+
+button#fight {
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: 'Kanit', sans-serif;
+}
